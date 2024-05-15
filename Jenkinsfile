@@ -7,7 +7,7 @@ pipeline {
 
 
     environment {
-        lab_number = "lab2"
+        lab_number = "2"
     }
 
     stages {
