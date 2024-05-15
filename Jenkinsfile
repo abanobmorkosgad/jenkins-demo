@@ -14,7 +14,7 @@ pipeline {
         stage('check') {
             steps {
                 echo "checking your code"
-                
+                error 'sorry there is a failure'
                
             }
         }
@@ -37,7 +37,12 @@ pipeline {
                 echo "this build number $BUILD_NUMBER"
                 echo "this lab ${lab_number}"
             }
-        }    
+        }   
+        post {
+            failure {
+                build "lab2"
+            }
+        } 
     }
 
 }
