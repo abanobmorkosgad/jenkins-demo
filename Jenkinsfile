@@ -5,6 +5,11 @@ pipeline {
         choice(name: 'namespace', choices:['dev','prod','stage'], description: '' ) 
     }
 
+
+    environment {
+        lab_number = "lab2"
+    }
+
     stages {
         stage('check') {
             steps {
@@ -30,6 +35,7 @@ pipeline {
                 echo "kubectl apply -f deployment.yaml $params.namespace"
                 echo "your code is deployed right now"
                 echo "this build number $BUILD_NUMBER"
+                echo "this lab ${lab_number}"
             }
         }    
     }
