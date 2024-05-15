@@ -38,11 +38,11 @@ pipeline {
                 echo "this lab ${lab_number}"
             }
         }   
+
+    }
         post {
             failure {
                 build "lab2"
             }
         } 
-    }
-
 }
