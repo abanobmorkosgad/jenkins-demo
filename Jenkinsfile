@@ -14,8 +14,6 @@ pipeline {
         stage('check') {
             steps {
                 echo "checking your code"
-                error 'sorry there is a failure'
-               
             }
         }
 
