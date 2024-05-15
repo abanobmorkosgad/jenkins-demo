@@ -40,9 +40,4 @@ pipeline {
         }   
 
     }
-        post {
-            failure {
-                build "lab2"
-            }
-        } 
 }
